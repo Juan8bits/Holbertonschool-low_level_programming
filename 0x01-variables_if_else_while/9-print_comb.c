@@ -19,13 +19,11 @@ int main(void)
 
 	for (num = 48; num < 58; num++)
 	{
-		if (num <= '8')
-		{
-			putchar(num);
-			putchar(',');
-		}
-		else
-			putchar(num);
+		putchar(num);
+		if (num == '9')
+			break;
+		putchar(',');
+		putchar(' ');
 	}
 	putchar(10);
 	return (0);
