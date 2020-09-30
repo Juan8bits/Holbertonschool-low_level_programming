@@ -7,7 +7,8 @@
 
 void rev_string(char *s)
 {
-	short int z, g, i, aux;
+	short int z, g, i;
+	char aux;
 
 	z = 0;
 	g = 0;
