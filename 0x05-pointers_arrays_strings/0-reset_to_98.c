@@ -1,7 +1,7 @@
 # include "holberton.h"
 
 /**
-* reset_to_98(int *n) - take a pointer to an int as parameter
+* reset_to_98 - take a pointer to an int as parameter
 * @n:The new value
 */
 
