@@ -7,10 +7,8 @@
 
 void rev_string(char *s)
 {
-	short int z, g, aux;
-	char *cop;
+	short int z, g, i, aux;
 
-	cop = s;
 	z = 0;
 	while (s[z] != '\0')
 	{
@@ -18,11 +16,11 @@ void rev_string(char *s)
 	}
 	z--;
 	g = 0;
-	for (; z >= 0; z--)
+	for (i = z; i >= (z / 2); i--)
 	{
-		aux = s[z];
-		cop[g] = aux;
+		aux = s[g];
+		s[g] = s[i];
+		s[i] = aux;
 		g++;
 	}
-	*s = *cop;
 }
