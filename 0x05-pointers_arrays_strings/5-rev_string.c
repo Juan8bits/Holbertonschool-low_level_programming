@@ -10,12 +10,10 @@ void rev_string(char *s)
 	short int z, g, i, aux;
 
 	z = 0;
-	while (s[z] != '\0')
-	{
-		z++;
-	}
-	z--;
 	g = 0;
+	while (s[z] != '\0')
+		z++;
+	z--;
 	for (i = z; i >= (z / 2); i--)
 	{
 		aux = s[g];
