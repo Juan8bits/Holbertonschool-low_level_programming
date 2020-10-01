@@ -1,12 +1,12 @@
 #include "holberton.h"
 
 /**
- * _strncat - Function that concatenates n characters of string to other string.
- * @dest: destiny string
- * @src: source string
- * @n: number of characters
- * Return: dest
- */
+* _strncat - Function that concatenates n characters of string to other string.
+* @dest: destiny string
+* @src: source string
+* @n: number of characters
+* Return: dest
+*/
 
 char *_strncat(char *dest, char *src, int n)
 {
@@ -23,5 +23,5 @@ char *_strncat(char *dest, char *src, int n)
 		i++;
 		j++;
 	}
-	return(dest);
+	return (dest);
 }
