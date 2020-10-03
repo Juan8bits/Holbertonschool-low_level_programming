@@ -9,7 +9,7 @@
 char *leet(char *s)
 {
 	int i, j;
-	char encode[]= "aeotl43071";
+	char encode[] = "aeotl43071";
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
