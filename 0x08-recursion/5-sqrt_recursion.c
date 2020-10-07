@@ -27,6 +27,6 @@ int rev(int n, int x)
 		x = rev(n, x + 1);
 	}
 	if ((x * x) > n)
-		return(-1);
+		return (-1);
 	return (x);
 }
