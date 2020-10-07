@@ -1,7 +1,8 @@
 #include "holberton.h"
 #include <stdio.h>
 /**
- * print_diagsums - functiont that prints sum of the two diagonals (multidimensional array)
+ * print_diagsums - functiont that prints sum of the
+ * two diagonals (multidimensional array)
  * @a: matrix
  * @size: size of matrix
  */
