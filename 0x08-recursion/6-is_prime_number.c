@@ -8,8 +8,9 @@
 int is_prime_number(int n)
 {
 	int x;
+
 	x = 2;
-        return (rev_is_prime(n, x));
+	return (rev_is_prime(n, x));
 }
 
 /**
