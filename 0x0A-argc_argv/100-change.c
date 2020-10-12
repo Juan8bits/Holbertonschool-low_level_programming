@@ -58,11 +58,6 @@ int main(int argc, char *argv[])
 	else
 	{
 		cant = atoi(argv[1]);
-		if (cant < 0)
-		{
-			printf("0\n");
-			return (1);
-		}
 		printf("%d\n", cambio(cant, 0));
 	}
 	return (0);
