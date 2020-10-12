@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
 		cant = atoi(argv[1]);
 		while (cant > 0)
 		{
-			coins ++;
+			coins++;
 			if (cant >= 25)
 				cant -= 25;
 			else if (cant >= 10)
