@@ -29,7 +29,7 @@ char *str_concat(char *s1, char *s2)
 	if (conc == NULL)
 		return (NULL);
 
-	for (j = 0; j < (i1 + i2 + 1); j++)
+	for (j = 0; j < (i1 + i2); j++)
 	{
 		if (j < i1)
 			conc[j] = s1[j];
