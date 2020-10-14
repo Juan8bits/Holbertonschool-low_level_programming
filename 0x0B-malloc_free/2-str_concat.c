@@ -13,6 +13,7 @@ char *str_concat(char *s1, char *s2)
 	short int i1, i2, j;
 	char *conc = NULL;
 
+	i2 = 0, i1 = 0;
 	if (s1 != NULL)
 	{
 		for (i1 = 0; s1[i1] != 0; i1++)
