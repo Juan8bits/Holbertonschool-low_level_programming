@@ -31,5 +31,6 @@ char *str_concat(char *s1, char *s2)
 		if (j >= i1)
 			conc[j] = s2[j - i1];
 	}
+	conc[j] = '\0';
 	return (conc);
 }
