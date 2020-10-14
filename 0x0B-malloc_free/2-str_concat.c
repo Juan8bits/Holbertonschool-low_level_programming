@@ -13,11 +13,12 @@ char *str_concat(char *s1, char *s2)
 	short int i1, i2, j;
 	char *conc = NULL;
 
+	if (s1 == NULL && s2 == NULL)
+		return (NULL);
 	for (i1 = 0; s1[i1] != 0; i1++)
 		;
 	for (i2 = 0; s2[i2] != 0; i2++)
 		;
-
 	conc = malloc(i1 + i2);
 
 	if (conc == NULL)
