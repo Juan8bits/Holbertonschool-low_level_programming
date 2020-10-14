@@ -26,7 +26,7 @@ char *argstostr(int ac, char **av)
 	}
 	sum += ac + 1;
 
-	p = malloc(sizeof(char *) * sum);
+	p = malloc(sizeof(char) * sum);
 
 	if (p == 0)
 		return (NULL);
