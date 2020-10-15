@@ -1,6 +1,5 @@
 #include "holberton.h"
 #include <stdlib.h>
-
 /**
  * string_nconcat - Function that concat two strings up to n characters
  * @s1: string 1.
@@ -28,7 +27,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (n < len2)
 		len2 = n;
 
-	p = malloc(len1 + len2 + 1);
+	p = malloc(sizeof(char) * (len1 + len2 + 1));
 
 	if (p == NULL)
 		return (NULL);
