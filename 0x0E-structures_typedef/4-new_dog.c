@@ -31,12 +31,15 @@ char *_strcpy(char *dest, char *src)
 
 int _strlen(char *s)
 {
-	int z;
+	int letters;
 
-	z = 0;
-	while (s[z] != '\0')
-		z++;
-	return (z);
+	while (*s != '\0')
+	{
+		s++;
+		letters++;
+	}
+
+	return (letters);
 }
 /**
  * new_dog - Functiont that creates a new dog
