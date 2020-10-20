@@ -1,5 +1,6 @@
 #include "dog.h"
 #include <stdlib.h>
+#include <stdio.h>
 /**
  * _strcpy - copy strings
  * @dest: destiny string
@@ -74,5 +75,6 @@ dog_t *new_dog(char *name, float age, char *owner)
 	newdog->name = name;
 	newdog->age = age;
 	newdog->owner = owner;
+
 	return (newdog);
 }
