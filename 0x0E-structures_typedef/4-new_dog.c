@@ -1,7 +1,5 @@
 #include "dog.h"
 #include <stdlib.h>
-char *_strcpy(char *dest, char *src);
-int _strlen(char *s);
 /**
  * _strcpy - copy strings
  * @dest: destiny string
@@ -10,14 +8,16 @@ int _strlen(char *s);
  */
 char *_strcpy(char *dest, char *src)
 {
-	int leng;
+	int i, l;
 
-	while (src[leng] != '\0')
-	{
-		dest[leng] = src[leng];
-		leng++;
-	}
-	dest[leng] = '\0';
+	l = 0;
+
+	while (src[l] != '\0')
+		l++;
+
+	for (i = 0; i < l; i++)
+		dest[i] = src[i];
+	dest[i] = '\0';
 	return (dest);
 }
 /**
@@ -30,6 +30,7 @@ int _strlen(char *s)
 {
 	int z;
 
+	z = 0;
 	while (s[z] != '\0')
 		z++;
 	return (z);
@@ -45,7 +46,8 @@ int _strlen(char *s)
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *newdog;
-	char *copyname, *copyowner;
+	char *copyname;
+	char *copyowner;
 
 	if (name == NULL || owner == NULL)
 		return (NULL);
@@ -72,8 +74,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 	}
 	_strcpy(copyname, name);
 	_strcpy(copyowner, owner);
-	newdog->name = copyname;
+	newdog->name = name;
 	newdog->age = age;
-	newdog->owner = copyowner;
+	newdog->owner = owner;
 	return (newdog);
 }
