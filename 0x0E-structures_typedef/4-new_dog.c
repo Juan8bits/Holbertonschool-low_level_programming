@@ -31,15 +31,11 @@ char *_strcpy(char *dest, char *src)
 
 int _strlen(char *s)
 {
-	int letters;
+	int z;
 
-	while (*s != '\0')
-	{
-		s++;
-		letters++;
-	}
-
-	return (letters);
+	while (s[z] != '\0')
+		z++;
+	return (z);
 }
 /**
  * new_dog - Functiont that creates a new dog
@@ -64,6 +60,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	if (copyname == NULL)
 	{
+		free(copyname);
 		free(newdog);
 		return (NULL);
 	}
@@ -73,6 +70,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	{
 		free(newdog);
 		free(copyname);
+		free(copyowner);
 		return (NULL);
 	}
 	_strcpy(copyname, name);
