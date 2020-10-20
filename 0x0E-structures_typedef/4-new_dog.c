@@ -9,16 +9,18 @@
  */
 char *_strcpy(char *dest, char *src)
 {
-	int i, l;
+	int i;
 
-	l = 0;
-
-	while (src[l] != '\0')
-		l++;
-
-	for (i = 0; i < l; i++)
+	for (i = 0; i != '\0'; i++)
+	{
 		dest[i] = src[i];
-	dest[i] = '\0';
+	}
+
+	for (; i == '\0'; i++)
+	{
+		dest[i] = '\0';
+	}
+
 	return (dest);
 }
 /**
@@ -68,7 +70,6 @@ dog_t *new_dog(char *name, float age, char *owner)
 	{
 		free(newdog);
 		free(copyname);
-		free(copyowner);
 		return (NULL);
 	}
 	_strcpy(copyname, name);
