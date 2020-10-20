@@ -11,6 +11,7 @@ char *_strcpy(char *dest, char *src)
 {
 	int leng;
 
+	leng = 0;
 	while (src[leng] != '\0')
 	{
 		dest[leng] = src[leng];
@@ -29,6 +30,7 @@ int _strlen(char *s)
 {
 	int z;
 
+	z = 0;
 	while (s[z] != '\0')
 		z++;
 	return (z);
