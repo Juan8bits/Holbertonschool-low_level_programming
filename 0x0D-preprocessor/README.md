@@ -40,3 +40,6 @@ What you should learn from this project:
 ### [4. SUM](./4-sum.h)
 * Write a function-like macro SUM(x, y) that computes the sum of the numbers x and y.
 
+## Author
+
+**Juan Manuel Ramírez Saa** - [Juan8bits](https://github.com/Juan8bits)
