@@ -12,7 +12,7 @@ void array_iterator(int *array, size_t size, void (*action)(int))
 {
 	unsigned int iterator;
 
-	if (size > 0 && array != NULL)
+	if (size && array && action)
 	{
 		for (iterator = 0; iterator < size; iterator++)
 		{
