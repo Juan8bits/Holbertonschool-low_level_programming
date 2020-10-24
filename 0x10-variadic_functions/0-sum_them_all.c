@@ -2,8 +2,8 @@
 
 /**
  * sum_them_all - Fuction that sum the arguments given
- * @n: Arguments numbers
- * Return: sum or 0
+ * @n: Arguments numbers.
+ * Return: sum or 0.
  */
 int sum_them_all(const unsigned int n, ...)
 {
