@@ -6,6 +6,7 @@
  */
 void print_all(const char * const format, ...)
 {
+	va_list arguments;
 	data typed[] = {
 		{"c", typechar},
 		{"i", typeinteger},
@@ -14,7 +15,6 @@ void print_all(const char * const format, ...)
 		{"\0", NULL}
 	};
 	int i, j;
-	va_list arguments;
 
 	va_start(arguments, format);
 	i = 0;
