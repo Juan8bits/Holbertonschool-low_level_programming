@@ -11,7 +11,7 @@ void print_all(const char * const format, ...)
 		{"i", typeinteger},
 		{"f", typefloat},
 		{"s", typestring},
-		{NULL, NULL}
+		{"\0", NULL}
 	};
 	int i, j;
 	va_list arguments;
@@ -21,7 +21,7 @@ void print_all(const char * const format, ...)
 	while (format != NULL && format[i])
 	{
 		j = 0;
-		while (j < 4)
+		while (j < 5)
 		{
 			if (*typed[j].string == format[i])
 			{
@@ -62,7 +62,7 @@ void typefloat(va_list arguments)
 	printf("%f", va_arg(arguments, double));
 }
 /**
- * typestring - Function that prints char type arguments.
+ * typestring - Function that prints char-type arguments.
  * @arguments: list of types of arguments passed to the function
  */
 void typestring(va_list arguments)
@@ -70,5 +70,5 @@ void typestring(va_list arguments)
 	char *p = NULL;
 
 	p = va_arg(arguments, char *);
-	printf("%s", p = NULL ? "(nil)" : p);
+	printf("%s", ((p != NULL) ? (p) : (p = "(nil)")));
 }
