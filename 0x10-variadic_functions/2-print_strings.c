@@ -14,22 +14,19 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	char *p; /* adress to item list */
 
 	va_start(arguments, n);
-	if (n != 0)
+	for (i = 0; i < n; i++)
 	{
-		for (i = 0; i < n; i++)
+		if (i != 0)
 		{
-			if (i != 0)
-			{
-				if (separator != NULL)
-					printf("%s", separator);
-			}
-			p = va_arg(arguments, char*);
-			if (p != NULL)
-				printf("%s", p);
-			else
-				printf("(nil)");
+			if (separator != NULL)
+				printf("%s", separator);
 		}
-		printf("\n");
-		va_end(arguments);
+		p = va_arg(arguments, char*);
+		if (p != '\0')
+			printf("%s", p);
+		else
+			printf("(nil)");
 	}
+	printf("\n");
+	va_end(arguments);
 }
