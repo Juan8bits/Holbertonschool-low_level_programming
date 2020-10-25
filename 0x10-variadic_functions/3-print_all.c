@@ -26,7 +26,7 @@ void print_all(const char * const format, ...)
 		{
 			if (*typed[j].string == format[i])
 			{
-			       	printf("%s", separator);
+				printf("%s", separator);
 				typed[j].function(arguments);
 				separator = ", ";
 				break;
