@@ -15,6 +15,7 @@ void print_all(const char * const format, ...)
 		{"\0", NULL}
 	};
 	int i, j;
+	char *separator = "";
 
 	va_start(arguments, format);
 	i = 0;
@@ -25,9 +26,9 @@ void print_all(const char * const format, ...)
 		{
 			if (*typed[j].string == format[i])
 			{
-				if (i)
-					printf(", ");
+			       	printf("%s", separator);
 				typed[j].function(arguments);
+				separator = ", ";
 				break;
 			}
 			j++;
@@ -70,5 +71,7 @@ void typestring(va_list arguments)
 	char *p = NULL;
 
 	p = va_arg(arguments, char *);
-	printf("%s", ((p != NULL) ? (p) : (p = "(nil)")));
+	if (p == NULL)
+		p = "(nil)";
+	printf("%s", p);
 }
