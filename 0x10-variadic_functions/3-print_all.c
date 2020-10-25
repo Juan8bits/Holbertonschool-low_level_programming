@@ -11,6 +11,7 @@ void print_all(const char * const format, ...)
 		{"i", typeinteger},
 		{"f", typefloat},
 		{"s", typestring},
+		{NULL, NULL}
 	};
 	int i, j;
 	va_list arguments;
