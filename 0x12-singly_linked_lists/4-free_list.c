@@ -8,15 +8,11 @@ void free_list(list_t *head)
 {
 	list_t *mempoint = NULL;
 
-
-	if (head)
+	while (head)
 	{
-		while (head)
-		{
-			mempoint = head->next;
-			free(head->next);
-			free(head);
-			head = mempoint;
-		}
+		mempoint = head->next;
+		free(head->str);
+		free(head);
+		head = mempoint;
 	}
 }
