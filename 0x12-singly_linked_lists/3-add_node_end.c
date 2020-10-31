@@ -1,13 +1,20 @@
 #include "lists.h"
-int lengs(const char *s)
-{
-        int i;
 
-        i = 0;
-        while (s[i])
-                i++;
-        return (i);
+/**
+ * lengs - Function that returns leng of string
+ * @s: input string
+ * Return: Leng of a string.
+ */
+
+unsigned int lengs(const char *s)
+{
+	int i;
+
+	for (i = 0; s[i]; i++)
+		;
+	return (i);
 }
+
 /**
  * add_node_end - Function
  * @head: pointer to pointer to address.
