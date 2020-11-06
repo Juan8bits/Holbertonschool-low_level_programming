@@ -37,6 +37,9 @@ What you should learn from this project:
 ### [5. 101](./5-flip_bits.c)
 * Write a function that returns the number of bits you would need to flip to get from one number to another.
 
+### [6. Endianness](./100-get_endianness.c)
+* Write a function that checks the endianness.
+
 ## Author
 
 **Juan Manuel Ramírez Saa** - [Juan8bits](https://github.com/Juan8bits)
