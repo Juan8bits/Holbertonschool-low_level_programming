@@ -9,14 +9,18 @@
 int create_file(const char *filename, char *text_content)
 {
 	int fd = 0;
-	ssize_t counter = 0;
+	ssize_t counter = 0, len = 0;
 
 	if (filename)
 	{
 		fd = open(filename, O_RDWR | O_CREAT | O_TRUNC, 00600);
 		if (fd < 0)
 			return (-1);
-		counter = write(fd, text_content, sizeof(text_content));
+		if (!sizeof(text_content))
+			len = 1;
+		else
+			len = sizeof(text_content);
+		counter = write(fd, text_content, len);
 		if (counter < 0)
 			return (-1);
 		return (1);
