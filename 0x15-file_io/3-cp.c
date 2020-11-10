@@ -31,7 +31,7 @@ if (nwrite < 0)
 dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]), exit(99);
 }
 
-if (file_from < 0)
+if (nread < 0)
 dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]), exit(98);
 
 if (close(file_from) == -1)
