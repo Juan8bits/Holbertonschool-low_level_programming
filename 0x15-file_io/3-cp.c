@@ -17,13 +17,13 @@ dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 exit(97);
 }
 file_from = open(av[1], O_RDONLY);
-if (file_from < 0 || read(file_from, buf, bufsize) < 0)
+nread = read(file_from, buf, bufsize);
+if (file_from < 0 || nread < 0)
 {
 dprintf(STDERR_FILENO, "Error: Can't read from file %s\n",
 av[1]);
 exit(98);
 }
-nread = read(file_from, buf, bufsize);
 file_to = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, 00664);
 if (file_to < 0)
 {
