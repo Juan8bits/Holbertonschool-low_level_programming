@@ -12,7 +12,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	dlistint_t *new;
 	dlistint_t *copy;
-	unsigned int position;
+	unsigned int position = 0;
 
 	copy = *h;
 	if (!*h)
