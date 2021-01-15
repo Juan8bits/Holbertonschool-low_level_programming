@@ -11,13 +11,13 @@
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	hash_node_t *temp = NULL;
-	unsigned int index;
+	unsigned int indx;
 
-	if (!ht || !key)
+	if (!ht || !key || !value || *key == 0)
 		return (0);
 
-	index = key_index((unsigned char *)key, ht->size);
-	temp = ht->array[index];
+	indx = key_index((unsigned char *)key, ht->size);
+	temp = ht->array[indx];
 	while (temp)
 	{
 		if (strcmp(temp->key, key) == 0)
@@ -28,9 +28,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		}
 		temp = temp->next;
 	}
-	temp = add_node(ht->array[index], key, value);
+	temp = add_node(ht->array[indx], key, value);
 	if (!temp)
 		return (0);
+	ht->array[indx] = temp;
 	return (1);
 }
 /**
