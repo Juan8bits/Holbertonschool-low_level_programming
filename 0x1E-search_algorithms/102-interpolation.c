@@ -19,7 +19,7 @@ int interpolation_search(int *array, size_t size, int value)
 	{
 		middle = left + ((right - left) / (array[right] - array[left]))
 			* (value - array[left]);
-		if (middle < size)
+		if (middle <= size)
 			printf("Value checked array[%lu] = [%d]\n", middle, array[middle]);
 		else
 		{
